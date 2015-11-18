@@ -2,7 +2,30 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+div{
+  padding: 5px;
+  margin: 5px;
+}
 
 a {
   color: #00B7FF;
+}
+#w120{
+	width:120px;
+}
+table{
+	border: dotted;
+	  padding: 5px;
+	  margin: 5px;
+}
+td{
+	background-color: #dd99aa;
+	padding: 1px;
+	margin: 1px;
+}
+th{
+	background-color: #99aa33;
+	color: gray;
+	padding: 1px;
+	margin: 1px;
 }

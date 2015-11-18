@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h1 Customer list
+  div
+   form(name="customers-search",method="post")
+    div
+     label(for="name") お名前
+     br
+     input(id='name',type='text',value='#{old_requests.name}',name='name')
+    div
+     label(for="tel") 電話番号
+     br
+     input(id='tel',type='text',value='#{old_requests.tel}',name='tel')
+    div
+     label(for="address") 住所
+     br
+     input(id='address',type='text',value='#{old_requests.address}',name='address')
+    div
+     input(type='submit',value='検索')
+   div
+    table
+     tr
+      th(with="30%") 顧客番号
+      th(with="30%") お名前
+      th(with="30%") kana
+     each row in rows
+      tr
+       td= row.customer_no
+       td= row.name
+       td= row.name_kn
