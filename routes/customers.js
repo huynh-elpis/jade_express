@@ -1,7 +1,8 @@
 var express = require('express');
-var router = express.Router();
-
 var mysql = require('mysql');
+//var mysql = require('jquery');
+
+var router = express.Router();
 
 var connection = mysql.createConnection({ 
 	host: 'localhost',
@@ -10,12 +11,13 @@ var connection = mysql.createConnection({
 	database: "contents_seven",
 }); 
 connection.connect();
-/* GET users listing. */
 router.get('/', function(req, res, next) {
+	//$("<p>dùng jquery trong controller get</p>").appendTo("h1");
 	res.render('customers',{rows:[], old_requests:{name:'',tel:'',address:''}});
 });
-
 router.post('/', function(req, res, next) {
+	//$("<p>dùng jquery trong controller post</p>").appendTo("h1");
+	
 	query = "SELECT customer_no, name, name_kn FROM `customers` WHERE avail_flg = '1' ";
 	var old_requests = {name:'',tel:'',address:''};
 	if(req.body.name !== ''){
@@ -35,7 +37,6 @@ router.post('/', function(req, res, next) {
 	connection.query(query,function(err, rows){
 		res.render('customers', {rows: rows, old_requests:old_requests});
 	});
-	//res.render('customers');
 });
 
 module.exports = router;

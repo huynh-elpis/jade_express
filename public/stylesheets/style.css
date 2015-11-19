@@ -1,5 +1,5 @@
 body {
-  padding: 50px;
+  padding: 10px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 div{
@@ -14,9 +14,8 @@ a {
 	width:120px;
 }
 table{
-	border: dotted;
-	  padding: 5px;
-	  margin: 5px;
+	padding: 5px;
+	margin: 5px;
 }
 td{
 	background-color: #dd99aa;
