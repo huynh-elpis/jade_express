@@ -50,7 +50,7 @@ if (app.get('env') === 'development') {
   });
 }
 
-// production error handler
+// production error handler test
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
   res.status(err.status || 500);
